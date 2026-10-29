@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #e0e7ff 0%, #f3f4f6 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    color: #1f2937;
+}
+
+.form-container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 450px;
+    padding: 2.5rem 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Heading Style Fixes */
+.form-container h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    background: linear-gradient(90deg, #1e3a8a, #9333ea);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Balanced Form Group Spacing */
+.form-group {
+    margin-bottom: 0.1rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 0.4rem;
+}
+
+.input-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 0.65rem 0.875rem;
+    font-size: 0.95rem;
+    color: #111827;
+    background-color: #f9fafb;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.input-wrapper input:focus {
+    background-color: #ffffff;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.error-message {
+    display: block;
+    color: #ef4444;
+    font-size: 0.75rem;
+    margin-top: 0.375rem;
+    min-height: 1.125rem; /* Prevents layout shifting when error text appears/disappears */
+}
+
+/* Password Strength Meter */
+.strength-bar {
+    height: 6px;
+    width: 100%;
+    background-color: #e5e7eb;
+    border-radius: 3px;
+    margin-top: 0.5rem;
+    overflow: hidden;
+}
+
+#strength-fill {
+    height: 100%;
+    width: 0%;
+    border-radius: 3px;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+#strength-text {
+    display: block;
+    font-size: 0.75rem;
+    color: #6b7280;
+    margin-top: 0.25rem;
+    min-height: 1.125rem;
+}
+
+/* Primary Action Button */
+#submitBtn {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #3b82f6;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+#submitBtn:hover:not(:disabled) {
+    background-color: #2563eb;
+}
+
+#submitBtn:active:not(:disabled) {
+    transform: scale(0.98); /* Slight click effect */
+}
+
+#submitBtn:disabled {
+    background-color: #93c5fd;
+    cursor: not-allowed;
+}
+
+/* Input validation icons */
+.input-wrapper .icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Red asterisk for required fields */
+.required-asterisk {
+    color: #ef4444; /* Matches the red used in the error messages */
+}

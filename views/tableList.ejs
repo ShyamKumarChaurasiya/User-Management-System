@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Managememnt System</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1 class="heading">User Managememnt System</h1>
+    <h2 class="sec-heading">Total Tables in sigma DB</h2>
+    <ul class="list">
+        <% for (let row of rows){ %>
+            <li class="data"> <%= row["Tables_in_sigma"] %> </li>
+        <% } %>
+    </ul>
+    <a href="/" class="back">Back</a>
+</body>
+</html>

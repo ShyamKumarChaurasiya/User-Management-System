@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit - User Management System</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Edit your username</h1>
+
+    <h3>Id : <%=user.id%></h3>
+    <h3>Email : <%=user.email%></h3>
+    <form action="/students/<%= user.id %>?_method=PATCH" method="POST">
+        <textarea name="username" rows="3" cols="20"><%=user.username%></textarea>
+        <input type="password" name="password" placeholder="Verify with password">
+        <button>Save</button>   
+    </form>
+    <a href="/students" class="cancel">Cancel</a>
+</body>
+</html>

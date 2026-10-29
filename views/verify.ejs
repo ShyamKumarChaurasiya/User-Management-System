@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Delete - User Management System</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>User Verification required.</h1>
+
+    <h3 class="verify-id">Id : <%=user.id%> </h3>
+    <h3 class="verify-username">Email : <%=user.username %> </h3>
+    <h3 class="verify-email">Email : <%= user.email %> </h3>
+    <form action="/students/<%= user.id %>?_method=DELETE" method="POST">
+        <input type="password" name="password" placeholder="Verify with password">
+        <button>Delete</button>   
+    </form>
+    <a href="/students" class="cancel">Cancel</a>
+</body>
+</html>

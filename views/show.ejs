@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Managememnt System</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1 class="heading">Student's Detail of student table</h1>
+    <a href="/" class="back-to-home">Back to home</a>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Edit/Delete</th>
+        </tr>
+        <% for(let user of rows) { %>
+            <tr>
+                <td><%=user.id%></td>
+                <td><%=user.username%></td>
+                <td><%=user.email%></td>
+                <td>
+                    <form action="/students/<%=user.id%>/edit" method="GET">
+                        <button>Edit</button>
+                    </form>
+                    <form action="/students/<%=user.id%>/delete" method="GET">
+                        <button>Delete</button>
+                    </form>
+                </td>
+            </tr>
+            <% } %>
+    </table>
+</body>
+</html>
